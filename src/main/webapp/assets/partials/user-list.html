@@ -1,0 +1,35 @@
+<callback-message msg="message"></callback-message>
+<div>
+    <div class="row col-md-4">
+        <input type="search" ng-model="q.name" placeholder="filter users by name..." class="form-control"/>
+    </div>
+
+    <table class="table">
+        <caption>User list</caption>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="user in users | filter:q as results" class="repeated-item">
+                <td><a href="#/users/{{user.id}}">{{user.id}}</a></td>
+                <td>{{user.name}}</td>
+                <td>{{user.age}}</td>
+                <td>
+                    <button type="button" class="btn btn-default" ng-click="deleteUser(user)" aria-label="Delete">
+                        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                    </button>
+                </td>
+
+                <div ng-if="results.length == 0">
+                    <strong>Oops, no results found...</strong>
+                </div>
+            </tr>
+        </tbody>
+    </table>
+    <button ng-click="addUser()">Add</button>
+</div>

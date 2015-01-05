@@ -1,0 +1,19 @@
+.result-message {
+    min-height: 20px;
+}
+
+.result-message.ng-hide-add.ng-hide-add-active,
+.result-message.ng-hide-remove.ng-hide-remove-active {
+    -webkit-transition:all linear 0.5s;
+    transition:all linear 0.5s;
+}
+
+.result-message.ng-hide {
+    /*line-height: 0;*/
+    opacity: 0;
+    /*padding: 10px 0;*/
+}
+
+input.ng-touched.ng-invalid {
+    border-color: red;
+}

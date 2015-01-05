@@ -1,0 +1,4 @@
+<div ng-hide="!message.show" class="result-message alert alert-{{message.class}} ng-hide" role="alert">
+    <button type="button" class="close"><span aria-hidden="true" ng-click="hideMessage()">&times;</span><span class="sr-only">Close</span></button>
+    <strong>{{message.result}}</strong> {{message.description}}
+</div>
